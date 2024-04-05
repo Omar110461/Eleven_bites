@@ -1,7 +1,18 @@
-echo "hello world"
-echo "welcome to my homepage"
-echo "development in the project"
-echo "This project is on shawarma"
-echo "The main ingredient will be chicken"
-echo "Another ingredient is sausage"
-echo "You also need some sauces in it"
+<?php
+
+include(dirname(__FILE__) .'/db/index.php');
+
+session_start();
+
+if ($_SESSION["user"]) {
+   header("Location: home.php");
+ } else{
+   header("Location: login.php" );
+ }
+
+
+
+
+
+
+?>
